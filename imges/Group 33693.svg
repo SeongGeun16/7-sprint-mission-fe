@@ -1,0 +1,16 @@
+<svg width="162" height="104" viewBox="0 0 162 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 33693">
+<path id="Union" fill-rule="evenodd" clip-rule="evenodd" d="M24.2568 0C11.002 0 0.256836 10.7452 0.256836 24V59.5341C0.256836 72.789 11.002 83.5341 24.2569 83.5341H19.0519V103.165L52.8832 83.5341H137.478C150.733 83.5341 161.478 72.789 161.478 59.5341V24C161.478 10.7452 150.733 0 137.478 0H24.2568Z" fill="#97C7FF"/>
+<g id="Group 33692">
+<g id="Group 33690">
+<circle id="Ellipse 44" cx="41.1888" cy="41.7666" r="20.8835" fill="#52A2FF"/>
+<ellipse id="Ellipse 45" cx="41.1888" cy="38.8429" rx="1.67068" ry="2.92369" fill="#1E86FF"/>
+<ellipse id="Ellipse 46" cx="54.1365" cy="39.2602" rx="1.25301" ry="2.50602" fill="#1E86FF"/>
+<path id="Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M43.4846 44.5024C43.2756 50.0498 43.3901 54.5707 47.0364 54.7155C50.6827 54.8603 53.1033 50.4401 53.4222 44.8971L43.4846 44.5024Z" fill="#1E86FF"/>
+</g>
+<rect id="Rectangle 6171" x="72.9316" y="22.554" width="63.4859" height="7.51807" rx="3.75904" fill="#52A2FF"/>
+<rect id="Rectangle 6172" x="72.9316" y="37.5901" width="42.6024" height="7.51807" rx="3.75904" fill="#52A2FF"/>
+<rect id="Rectangle 6173" x="72.9316" y="52.6263" width="28.4016" height="7.51807" rx="3.75904" fill="#52A2FF"/>
+</g>
+</g>
+</svg>
