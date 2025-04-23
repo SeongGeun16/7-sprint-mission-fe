@@ -1,0 +1,274 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url('./PretendardVariable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    --color-page: #fcfcfc;
+    --color-blue: #3692ff;
+    --color-black: #1f2937;
+    --color-inputbox: #f3f4f6;
+    --color-gray: #9ca3af;
+    --color-simple: #e6f2ff;
+}
+
+.container{
+    display: flex;
+    position: sticky;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-page);
+}
+
+.frame{
+    display: flex;
+    width: 40rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    flex-shrink: 0;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: 24.75rem;
+    height: 8.25rem;
+    text-decoration: none;
+}
+
+.panda_face{
+    width: 6.47056rem;
+    height: 6.4925rem;
+    flex-shrink: 0;
+}
+
+.panda_title{
+    color: var(--color-blue);
+    font-family: "ROKAF Sans";
+    font-size: 4.1465rem;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.loginbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    align-self: stretch;
+}
+
+.email, .id{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.emailinput, .password{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.idtext{
+    color: var(--color-black);
+    font-family: Pretendard;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.625rem;
+}
+
+.emailtextinput{
+    width: 40rem;
+    padding: 1rem 1.5rem;
+    align-items: center;
+    gap: 0.625rem;
+    border: none;
+    border-radius: 0.75rem;
+    background-color: var(--color-inputbox);
+    color: var(--color-black);
+    font-family: Pretendard;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.625rem;
+}
+
+.emailtextinput:focus, .passwordinput:focus{
+    outline: none;
+    border: 2px solid var(--color-blue);
+}
+
+.emailtextinput::placeholder, .passwordinput::placeholder{
+    color: var(--color-gray);
+}
+
+.passwordbar{
+    position: relative;
+    justify-content: space-between;
+    align-self: stretch;
+}
+
+.passwordinput{
+    width: 40rem;
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.625rem;
+    border: none;
+    border-radius: 0.75rem;
+    background-color: var(--color-inputbox);
+    color: var(--color-black);
+    font-family: Pretendard;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.625rem;
+}
+
+.visibility{
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    height: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn_login{
+    display: flex;
+    width: 40rem;
+    height: 3.5rem;
+    padding: 1rem 7.75rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 2.5rem;
+    background-color: var(--color-gray);
+    border: none;
+    cursor: pointer;
+}
+
+.btn_logintext{
+    color: var(--color-inputbox);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 2rem;
+}
+
+.simplicity{
+    width: 40rem;
+    height: 4.625rem;
+    padding: 1rem 1.4375rem;
+    align-items: flex-start;
+    gap: 0.625rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-simple);
+}
+
+.simpleloginframe{
+    display: flex;
+    width: 37.125rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.simplelogintext{
+    color: var(--color-black);
+    font-family: Pretendard;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.625rem;
+}
+
+.simpleloginicon{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+} 
+
+.icon1, .icon2{
+    position: relative;
+    width: 2.625rem;
+    height: 2.625rem;
+    flex-shrink: 0;
+}
+
+.googleback, .kakaoback{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.google{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.375rem;
+    height: 1.375rem;
+    flex-shrink: 0;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.kakao{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.625rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.signup{
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
+    align-items: center;
+}
+
+.signuptext1{
+    color: var(--color-black);
+    font-family: Pretendard;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+.signuptext2{
+    color: var(--color-blue);
+    font-family: Pretendard;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    cursor: pointer;
+}
