@@ -5,7 +5,7 @@
     font-style: normal;
   }
 
-.container{
+.header{
     position: sticky;
     width: 100%;
     display: flex;
@@ -15,14 +15,17 @@
     padding: 0 12.5rem;
     box-sizing: border-box;
     border-bottom: 0.1rem solid #dfdfdf;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
 }
 
-.logo{
+.logo-area{
     display: flex;
     gap: 0.537rem;
 }
 
-.title{
+.site-title{
     color: #3682ff;
     font-family: "ROKAF Sans";
     font-size: 1.602rem;
@@ -30,7 +33,7 @@
     white-space: nowrap;
 }
 
-.a_login{
+.btn_login{
     white-space: nowrap;
     text-decoration: none;
     display: flex;
@@ -115,14 +118,14 @@
     position: relative;
 }
 
-.thebody {
+.main-content {
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
     max-width: 120rem;
 }
 
-.section1{
+.first-section{
     flex-shrink: 0;
     display: flex;
     background-color: #fff;
@@ -135,7 +138,7 @@
     max-width: 120rem;
 }
 
-.section2{
+.second-section{
     display: flex;
     background-color: #fff;
     padding: 8.624rem 21.375rem;
@@ -147,7 +150,7 @@
     max-width: 120rem;
 }
 
-.section3{
+.third-section{
     display: flex;
     background-color: #fff;
     max-width: 120rem;
@@ -356,7 +359,7 @@
     flex-shrink: 0;
 }
 
-.navigation2{
+.footer{
     display: flex;
     max-width: 120rem;
     height: 10rem;
@@ -379,7 +382,7 @@
     z-index: 10;
 }
 
-.footertext{
+.copyright{
     color: #9ca3af;
     text-align: center;
     font-family: Pretemdard;
@@ -389,13 +392,13 @@
     line-height: normal;
 }
 
-.footertext2{
+.footer-links{
     display: flex;
     align-items: flex-start;
     gap: 1.875rem;
 }
 
-.ft{
+.footer-link{
     color: #e5e7eb;
     text-align: center;
     font-family: Pretemdard;
@@ -407,14 +410,14 @@
     text-decoration: none;
 }
 
-.footerimg{
+.footer-icons{
     display: flex;
     width: 7.25rem;
     align-items: flex-start;
     gap: 0.75rem;
 }
 
-.footericon{
+.footer-icon{
     display: flex;
     width: 1.25rem;
     height: 1.25rem;
