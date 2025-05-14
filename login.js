@@ -35,14 +35,14 @@ const removeError = (input) => {
 }
 
 const checkEmail = () => {
-    const value = emailInput.value.trim();
+    const email = emailInput.value.trim();
     removeError(emailInput);
 
-    if(value === "") {
+    if(email === "") {
         showError(emailInput, "이메일을 입력해주세요");
         return false;
     }
-    if(!emailRegex.test(value)) {
+    if(!emailRegex.test(email)) {
         showError(emailInput, "잘못된 이메일 형식입니다.");
         return false;
     }
@@ -50,14 +50,14 @@ const checkEmail = () => {
 }
 
 const checkPassword = () => {
-    const value = passwordInput.value.trim();
+    const password = passwordInput.value.trim();
     removeError(passwordInput);
 
-    if(value === "") {
+    if(password === "") {
         showError(passwordInput, "비밀번호를 입력해주세요");
         return false;
     }
-    if(value.length < 8) {
+    if(password.length < 8) {
         showError(passwordInput, "비밀번호를 8자 이상 입력해주세요.");
         return false;
     }
@@ -104,7 +104,7 @@ const showModal = (message, redirect = false) => {
     checkBtn.onclick = () => {
         modal.classList.add("hidden");
 
-        if(redirect) {
+        if (redirect) {
             window.location.href = "./items";
         }
     }
@@ -112,14 +112,14 @@ const showModal = (message, redirect = false) => {
 
 loginBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  if(loginBtn.disabled) return;
+  if (loginBtn.disabled) return;
 
-  const getEmail = emailInput.value.trim();
-  const getPassword = passwordInput.value.trim();
+  const userEmail = emailInput.value.trim();
+  const userPassword = passwordInput.value.trim();
 
-  const matchUser = USER_DATA.find((user) => user.email === getEmail);
+  const matchUser = USER_DATA.find((user) => user.email === userEmail);
 
-  if(!matchUser || matchUser.password !== getPassword){
+  if (!matchUser || matchUser.password !== userPassword){
     showModal("비밀번호가 일치하지 않습니다.");
     return;
   }

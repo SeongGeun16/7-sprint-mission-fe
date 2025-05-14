@@ -37,14 +37,14 @@ const removeError = (input) => {
 }
 
 const checkEmail = () => {
-    const value = emailInput.value.trim();
+    const email = emailInput.value.trim();
     removeError(emailInput);
 
-    if(value === "") {
+    if(email === "") {
         showError(emailInput, "이메일을 입력해주세요");
         return false;
     }
-    if(!emailRegex.test(value)) {
+    if(!emailRegex.test(email)) {
         showError(emailInput, "잘못된 이메일 형식입니다.");
         return false;
     }
@@ -55,7 +55,7 @@ const checkNickName = () => {
     const value = nicknameInput.value.trim();
     removeError(nicknameInput);
 
-    if(value === "") {
+    if (value === "") {
         showError(nicknameInput, "닉네임을 입력해주세요");
         return false;
     }
@@ -63,14 +63,14 @@ const checkNickName = () => {
 }
 
 const checkPassword = () => {
-    const value = passwordInput.value.trim();
+    const password = passwordInput.value.trim();
     removeError(passwordInput);
 
-    if(value === "") {
+    if (password === "") {
         showError(passwordInput, "비밀번호를 입력해주세요");
         return false;
     }
-    if(value.length < 8) {
+    if (password.length < 8) {
         showError(passwordInput, "비밀번호를 8자 이상 입력해주세요.");
         return false;
     }
@@ -80,7 +80,7 @@ const checkPassword = () => {
 const checkagainPassword = () => {
     removeError(confirmPasswordInput);
 
-    if(passwordInput.value !== confirmPasswordInput.value) {
+    if (passwordInput.value !== confirmPasswordInput.value) {
         showError(confirmPasswordInput, "비밀번호가 일치하지 않습니다.");
         return false;
     }
@@ -94,7 +94,7 @@ const loginButtonState = () => {
     const isNicknameValid = checkNickName();
     const isPasswordChcek = checkagainPassword();
 
-    if(isEmailValid && isPasswordValid && isNicknameValid && isPasswordChcek) {
+    if (isEmailValid && isPasswordValid && isNicknameValid && isPasswordChcek) {
         loginBtn.disabled = false;
         loginBtn.style.backgroundColor = "#3692ff";
     }
@@ -142,7 +142,7 @@ const showModal = (message, redirect = false) => {
     checkBtn.onclick = () => {
         modal.classList.add("hidden");
 
-        if(redirect) {
+        if (redirect) {
             window.location.href = "./items";
         }
     }
@@ -150,14 +150,14 @@ const showModal = (message, redirect = false) => {
 
 loginBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  if(loginBtn.disabled) return;
+  if (loginBtn.disabled) return;
 
-  const getEmail = emailInput.value.trim();
-  const getPassword = passwordInput.value.trim();
+  const userEmail = emailInput.value.trim();
+  const userPassword = passwordInput.value.trim();
 
-  const matchUser = USER_DATA.find((user) => user.email === getEmail);
+  const matchUser = USER_DATA.find((user) => user.email === userEmail);
 
-  if(matchUser){
+  if (matchUser) {
     showModal("사용 중인 이메일입니다.");
     return;
     }
