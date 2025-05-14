@@ -38,11 +38,11 @@ const checkEmail = () => {
     const email = emailInput.value.trim();
     removeError(emailInput);
 
-    if(email === "") {
+    if (email === "") {
         showError(emailInput, "이메일을 입력해주세요");
         return false;
     }
-    if(!emailRegex.test(email)) {
+    if (!emailRegex.test(email)) {
         showError(emailInput, "잘못된 이메일 형식입니다.");
         return false;
     }
@@ -53,11 +53,11 @@ const checkPassword = () => {
     const password = passwordInput.value.trim();
     removeError(passwordInput);
 
-    if(password === "") {
+    if (password === "") {
         showError(passwordInput, "비밀번호를 입력해주세요");
         return false;
     }
-    if(password.length < 8) {
+    if (password.length < 8) {
         showError(passwordInput, "비밀번호를 8자 이상 입력해주세요.");
         return false;
     }
@@ -68,7 +68,7 @@ const loginButtonState = () => {
     const isEmailValid = checkEmail();
     const isPasswordValid = checkPassword();
 
-    if(isEmailValid && isPasswordValid) {
+    if (isEmailValid && isPasswordValid) {
         loginBtn.disabled = false;
         loginBtn.style.backgroundColor = "#3692ff";
     }

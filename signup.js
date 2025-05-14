@@ -33,18 +33,18 @@ const showError = (input, message) => {
 const removeError = (input) => {
     input.classList.remove("input-error");
     const existingError = input.parentElement.querySelector(".errormessage");
-    if(existingError) existingError.remove();
+    if (existingError) existingError.remove();
 }
 
 const checkEmail = () => {
     const email = emailInput.value.trim();
     removeError(emailInput);
 
-    if(email === "") {
+    if (email === "") {
         showError(emailInput, "이메일을 입력해주세요");
         return false;
     }
-    if(!emailRegex.test(email)) {
+    if (!emailRegex.test(email)) {
         showError(emailInput, "잘못된 이메일 형식입니다.");
         return false;
     }
